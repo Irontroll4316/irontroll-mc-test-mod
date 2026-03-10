@@ -1,8 +1,10 @@
 package com.irontroll.irontrolltestmod;
 import org.slf4j.Logger;
 
+import com.irontroll.irontrolltestmod.item.ModItems;
 import com.mojang.logging.LogUtils;
 
+import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -22,6 +24,7 @@ public class IrontrollTestMod {
     public IrontrollTestMod(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
+        ModItems.register(modEventBus);
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -31,7 +34,10 @@ public class IrontrollTestMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.BISMUTH);
+            event.accept(ModItems.RAW_BISMUTH);
+        }
     }
 
     @SubscribeEvent

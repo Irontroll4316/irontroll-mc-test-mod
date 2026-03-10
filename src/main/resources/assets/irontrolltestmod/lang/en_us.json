@@ -1,13 +1,4 @@
 {
-  "itemGroup.irontrolltestmod": "Example Mod Tab",
-  "block.irontrolltestmod.example_block": "Example Block",
-  "item.irontrolltestmod.example_item": "Example Item",
-
-  "irontrolltestmod.configuration.title": "Irontroll Test Mod Configs",
-  "irontrolltestmod.configuration.section.irontrolltestmod.common.toml": "Irontroll Test Mod Configs",
-  "irontrolltestmod.configuration.section.irontrolltestmod.common.toml.title": "Irontroll Test Mod Configs",
-  "irontrolltestmod.configuration.items": "Item List",
-  "irontrolltestmod.configuration.logDirtBlock": "Log Dirt Block",
-  "irontrolltestmod.configuration.magicNumberIntroduction": "Magic Number Text",
-  "irontrolltestmod.configuration.magicNumber": "Magic Number"
+  "item.irontrolltestmod.bismuth": "Bismuth",
+  "item.irontrolltestmod.raw_bismuth": "Raw Bismuth"
 }
